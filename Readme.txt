@@ -15,6 +15,7 @@ Or from:
 Extract it so you have:
 
    ir2h.cpp
+   Makefile.*
 
 and
 
