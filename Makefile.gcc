@@ -1,0 +1,14 @@
+# Copyright (C) 2014-2018 Theo Niessink <theo@taletn.com>
+# This work is free. You can redistribute it and/or modify it under the
+# terms of the Do What The Fuck You Want To Public License, Version 2,
+# as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+
+CPPFLAGS = -O2 -ffast-math -D NDEBUG -Wall -Wno-unused-function -Wno-reorder
+
+all : ir2h
+
+ir2h : ir2h.cpp
+	$(CXX) $(CPPFLAGS) -o ir2h ir2h.cpp
+
+clean :
+	rm -f ir2h.o ir2h

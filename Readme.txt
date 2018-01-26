@@ -1,0 +1,45 @@
+IR TO C HEADER
+
+Converts mono/stereo impulse response (WAV file) to C header file(s).
+
+REQUIRES WDL "TALE" EDITION
+
+Get WDL "Tale" Edition from:
+
+   https://www.taletn.com/WDL.git
+
+Or from:
+
+   https://github.com/TaleTN/WDL
+
+Extract it so you have:
+
+   ir2h.cpp
+
+and
+
+   WDL/heapbuf.h
+   WDL/pcmfmtcvt.h
+   WDL/wavread.h
+   WDL/wdlendian.h
+   WDL/wdlstring.h
+   WDL/wdltypes.h
+
+HOW TO BUILD & RUN
+
+Windows:
+
+   nmake /f Makefile.msvc
+   ir2h.exe /?
+
+maxOS/Linux:
+
+   make -f Makefile.gcc
+   ./ir2h -h
+
+LICENSE
+
+Copyright (C) 2014-2018 Theo Niessink <theo@taletn.com>
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
