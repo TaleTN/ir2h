@@ -25,6 +25,7 @@ and
    WDL/wdlendian.h
    WDL/wdlstring.h
    WDL/wdltypes.h
+   WDL/win32_utf8.h
 
 HOW TO BUILD & RUN
 
@@ -40,7 +41,7 @@ maxOS/Linux:
 
 LICENSE
 
-Copyright (C) 2014-2018 Theo Niessink <theo@taletn.com>
+Copyright (C) 2014-2021 Theo Niessink <theo@taletn.com>
 This work is free. You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To Public License, Version 2,
 as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
