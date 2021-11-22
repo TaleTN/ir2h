@@ -68,12 +68,12 @@ int main(int argc, char* argv[])
 					const double e = floor(log10(a));
 					fprintf(out[i], "%.8f", x / pow(10.0, e));
 					if (e != 0.0) fprintf(out[i], "e%+.f", e);
-					putc('f', out[i]);
 				}
 				else
 				{
-					fputs("0", out[i]);
+					fprintf(out[i], "%.1f", x);
 				}
+				putc('f', out[i]);
 
 				if (++j < len) putc(',', out[i]);
 				if (!(j & 3) || j >= len) putc('\n', out[i]);
