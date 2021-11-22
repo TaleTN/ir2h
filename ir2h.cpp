@@ -1,9 +1,9 @@
-// Copyright (C) 2014-2018 Theo Niessink <theo@taletn.com>
+// Copyright (C) 2014-2021 Theo Niessink <theo@taletn.com>
 // This work is free. You can redistribute it and/or modify it under the
 // terms of the Do What The Fuck You Want To Public License, Version 2,
 // as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 
-#include <cmath>
+#include <math.h>
 #include <stdio.h>
 
 #include "WDL/wavread.h"
@@ -62,12 +62,12 @@ int main(int argc, char* argv[])
 		{
 			for (unsigned int j = 0; j < n;)
 			{
-				const float x = buf[i][j], a = fabs(x);
-				if (a > 0)
+				const double x = (double)buf[i][j], a = fabs(x);
+				if (a > 0.0)
 				{
-					const float e = floor(log10(a));
-					fprintf(out[i], "%.8f", x / pow(10, e));
-					if (e != 0) fprintf(out[i], "e%+.f", e);
+					const double e = floor(log10(a));
+					fprintf(out[i], "%.8f", x / pow(10.0, e));
+					if (e != 0.0) fprintf(out[i], "e%+.f", e);
 					putc('f', out[i]);
 				}
 				else
