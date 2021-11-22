@@ -47,6 +47,11 @@ int main(int argc, char* argv[])
 		if (!out[i]) return error("Error: Can't create C header file\n", 3);
 	}
 
+	for (int i = 0; i < nch; ++i)
+	{
+		fprintf(out[i], "/* %u samples */\n", len);
+	}
+
 	float buf[2][64], * const pp[2] = { buf[0], buf[1] };
 	while (len > 0)
 	{
